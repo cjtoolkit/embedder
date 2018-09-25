@@ -104,7 +104,7 @@ func processMatch(packageName, match string, tpl *template.Template) {
 		Tpl     string
 	}
 	err = tpl.Execute(destFile, context{
-		Source:  match,
+		Source:  strings.Replace(match, "\\", "/", -1),
 		Package: packageName,
 		Name:    name,
 		Tpl:     strings.Join(split(base64.StdEncoding.EncodeToString(buf.Bytes()), 76), "\n"),
