@@ -52,7 +52,7 @@ func main() {
 		Filename:    os.Args[2],
 	}
 
-	for _, match := range getMatchesFromPattern(os.Args[2:]) {
+	for _, match := range getMatchesFromPattern(os.Args[3:]) {
 		processMatch(info, match)
 	}
 
