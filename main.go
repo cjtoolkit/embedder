@@ -43,8 +43,8 @@ const (
 `
 
 func main() {
-	if len(os.Args) < 3 {
-		return
+	if len(os.Args) < 4 {
+		log.Fatal("Args Usage: PackageName, DestFilename, GlobPattern")
 	}
 
 	info := &templateInfo{
