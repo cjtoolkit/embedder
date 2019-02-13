@@ -107,7 +107,7 @@ package example
 
 and than run `$ go generate`
 
-## Output
+### Output
 
 const.go
 ```go
